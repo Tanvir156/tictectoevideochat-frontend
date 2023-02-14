@@ -91,8 +91,8 @@ function VideoChat() {
   const answerCall = () => {
     setCallAccepted(true);
     const peer = new Peer({
-      initiator: false,
-      trickle: false,
+      initiator: true,
+      trickle: true,
       stream: stream,
     });
     peer.on("signal", (data) => {
